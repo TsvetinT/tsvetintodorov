@@ -1,24 +1,3 @@
-var topButton = document.querySelector('.top-button');
-/* TOP BUTTON */
-window.onscroll = function () {
-  scrollFunction()
-};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-    document.getElementById('top-function').style.display = "block";
-  } else {
-    document.getElementById('top-function').style.display = "none";
-  }
-
-}
-topButton.addEventListener('click', topFunction, false);
-
-function topFunction(event) {
-  document.documentElement.scrollTop = 0;
-}
-
-topFunction();
 /*  STARTS */
 window.onload = function () {
   var canvas = document.getElementById('stars');
@@ -74,8 +53,34 @@ window.onload = function () {
       }
     }
   }
-
   setInterval(drawStars, 20);
 }
+/* SMOOTH SCROLL */
+$('a[href*="#"]')
+  .click(function (event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 
+      if (target.length) {
 
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function () {
+
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex', '-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });

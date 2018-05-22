@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +17,7 @@
 </head>
 
 <body>
-  <header>
+  <header href="top">
     <div class="container">
       <div class="row">
         <div class="col-lg-2 nav-bar">
@@ -51,12 +53,24 @@
       <div>
         <h2>Hello there! I am fresh new front end developer.
         </h2>
-        <h2>JavaScript,HTML,CSS, that`s what iam trying to do!</h2>
+        <h2>JavaScript,HTML,CSS, that`s what i am trying to do!</h2>
         <h2> I am from Sofia,Bulgaria</h2>
         <h2>I am 23 years old</h2>
       </div>
       <div class="row">
-        <a href="assets/cv.pdf" target="_blank" class=" tst-cv">Open my CV</a>
+        <div class="btn-group">
+          <a href="assets/cv.pdf" target="_blank" class="btn btn-primary tst-cv"><i class="material-icons">
+              add
+              </i> Open my CV</a>
+          
+        </div>
+      </div>
+      <div class="arrow-up">
+        <a href="#top">
+          <i class="material-icons">
+            keyboard_arrow_up
+          </i>
+        </a>
       </div>
     </div>
   </section>
@@ -107,14 +121,15 @@
           </div>
         </div>
       </div>
+      <div class="arrow-up">
+        <a href="#top">
+          <i class="material-icons">
+            keyboard_arrow_up
+          </i>
+        </a>
+      </div>
     </div>
   </section>
-  <!--  TOP BUTTON -->
-  <div>
-    <a id="top-function" class="top-button">
-      <i class="fa fa-arrow-circle-up"></i>
-    </a>
-  </div>
   <!--   CONTACT GET IN TOUCH -->
   <footer id="three" class="content-footer">
     <div>
